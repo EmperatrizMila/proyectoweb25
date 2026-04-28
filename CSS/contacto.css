@@ -1,0 +1,114 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* SECCIÓN */
+.contacto {
+    background: linear-gradient(135deg, #e9d5ff, #c084fc);
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* FORMULARIO */
+.formulario {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CAMPOS */
+.campo {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.campo label {
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+}
+
+/* BOTÓN */
+.boton-enviar {
+    background: #a855f7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.boton-enviar:hover {
+    background: #9333ea;
+    transform: scale(1.05);
+}
+
+/* WHATSAPP */
+.whatsapp {
+    display: inline-block;
+    margin-top: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+}
+
+/* BENEFICIOS */
+.info-extra {
+    margin-top: 40px;
+}
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.beneficio {
+    background: rgba(255,255,255,0.4);
+    padding: 15px;
+    border-radius: 15px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+}

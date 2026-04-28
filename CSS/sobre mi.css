@@ -1,0 +1,97 @@
+/* FONDO GENERAL */
+body {
+    background-color: #F9F6FC;
+    font-family: Arial, sans-serif;
+}
+
+/* PERFIL */
+.perfil {
+    text-align: center;
+    padding: 40px;
+    background: #E6D6F5;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #A076D1;
+}
+
+.nombre {
+    margin-top: 15px;
+    font-size: 26px;
+    color: #5B3B8C;
+}
+
+.descripcion {
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    color: #555;
+}
+
+/* DATOS */
+.datos {
+    background: #EFE4FA;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.contenedor-datos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dato {
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(160, 118, 209, 0.2);
+    color: #5B3B8C;
+}
+
+/* PORTAFOLIO */
+.portafolio {
+    padding: 40px;
+    text-align: center;
+}
+
+.contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.proyecto {
+    background: #EDE0FA;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(160, 118, 209, 0.2);
+    transition: 0.3s;
+}
+
+.proyecto h3 {
+    color: #6A3FA0;
+}
+
+.proyecto p {
+    color: #555;
+}
+
+.proyecto:hover {
+    transform: scale(1.05);
+    background: #D8C2F0;
+}
+
+/* TITULOS */
+h2 {
+    color: #6A3FA0;
+}
