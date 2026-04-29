@@ -1,0 +1,81 @@
+/* SECCIÓN GENERAL */
+.clientes {
+    background: #EFE4FA;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+/* TÍTULO */
+.clientes h2 {
+    color: #6A3FA0;
+    margin-bottom: 30px;
+}
+
+/* GRID DE CLIENTES */
+.contenedor-clientes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* TARJETA DE CLIENTE */
+.cliente {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(160, 118, 209, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* IMAGEN */
+.cliente img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* NOMBRE */
+.cliente h3 {
+    color: #6A3FA0;
+    margin: 10px 0;
+}
+
+/* DESCRIPCIÓN */
+.cliente p {
+    color: #555;
+    font-size: 15px;
+}
+
+/* TESTIMONIO */
+.cliente blockquote {
+    margin-top: 15px;
+    font-style: italic;
+    background: #F3E9FD;
+    padding: 10px;
+    border-radius: 10px;
+    color: #6A3FA0;
+    font-size: 14px;
+}
+
+/* EFECTO HOVER */
+.cliente:hover {
+    transform: translateY(-6px);
+    background: #E6D6F5;
+}
+
+/* RESPONSIVE (CELULAR) */
+@media (max-width: 768px) {
+    .contenedor-clientes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-clientes {
+        grid-template-columns: 1fr;
+    }
+}
