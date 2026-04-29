@@ -1,0 +1,40 @@
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Sitio cargando correctamente");
+
+    const btnTop = document.getElementById("btnTop");
+    const btnBottom = document.getElementById("btnBottom");
+    const btnSection = document.getElementById("btnSection");
+
+    // Mostrar botón cuando haces scroll
+    window.addEventListener("scroll", () => {
+        const show = window.scrollY > 200 ? "block" : "none";
+
+        if (btnTop) btnTop.style.display = show;
+        if (btnBottom) btnBottom.style.display = show;
+        if (btnSection) btnSection.style.display = show;
+    });
+
+    // Botón subir arriba
+    if (btnTop) {
+        btnTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+
+    // Botón bajar al final
+    if (btnBottom) {
+        btnBottom.addEventListener("click", () => {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+        });
+    }
+
+    // Botón ir a una sección específica
+    if (btnSection) {
+        btnSection.addEventListener("click", () => {
+            const section = document.getElementById("seccion"); // ID de tu sección
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    }
+});
