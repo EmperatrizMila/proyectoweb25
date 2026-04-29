@@ -1,40 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Sitio cargando correctamente");
 
-    const btnTop = document.getElementById("btnTop");
-    const btnBottom = document.getElementById("btnBottom");
-    const btnSection = document.getElementById("btnSection");
+    // ALERTAS
+    const frases = ["Hola 👋", "Bienvenido 😎", "Sigue explorando 🚀"];
 
-    // Mostrar botón cuando haces scroll
-    window.addEventListener("scroll", () => {
-        const show = window.scrollY > 200 ? "block" : "none";
+    document.body.addEventListener("click", (e) => {
+        const elementosIgnorar = e.target.closest("button, a, input, textarea, select, label");
 
-        if (btnTop) btnTop.style.display = show;
-        if (btnBottom) btnBottom.style.display = show;
-        if (btnSection) btnSection.style.display = show;
+        if (!elementosIgnorar) {
+            const frase = frases[Math.floor(Math.random() * frases.length)];
+            alert(frase);
+        }
     });
 
-    // Botón subir arriba
-    if (btnTop) {
-        btnTop.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    }
+    // CRONÓMETRO
+    let s = 0;
+    const reloj = document.createElement("div");
+    reloj.style.cssText = "position:fixed; top:10px; left:10px; background:red; color:white; padding:5px;";
+    reloj.textContent = "0s";
+    document.body.appendChild(reloj);
 
-    // Botón bajar al final
-    if (btnBottom) {
-        btnBottom.addEventListener("click", () => {
-            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-        });
-    }
+    setInterval(() => {
+        s++;
+        reloj.textContent = s + "s";
+    }, 1000);
 
-    // Botón ir a una sección específica
-    if (btnSection) {
-        btnSection.addEventListener("click", () => {
-            const section = document.getElementById("seccion"); // ID de tu sección
-            if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-            }
+    // MODO OSCURO
+    const btnModo = document.createElement("button");
+    btnModo.textContent = "🌙";
+    btnModo.style.cssText = "position:fixed; top:10px; right:10px;";
+    document.body.appendChild(btnModo);
+
+    btnModo.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+    });
+
+    // IR ABAJO
+    const btnBottom = document.createElement("button");
+    btnBottom.textContent = "⬇️";
+    btnBottom.style.cssText = "position:fixed; bottom:20px; left:20px;";
+    document.body.appendChild(btnBottom);
+
+    btnBottom.addEventListener("click", () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
         });
-    }
+    });
+
 });
