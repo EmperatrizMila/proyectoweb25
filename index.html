@@ -34,7 +34,7 @@
         <a class="boton" href="#">CONTACTAR</a>
     </div>
     <button id="btnTop">IR ARRIBA</button>
-        <script src="script.js"></script> 
+        <script src="js/script.js"></script> 
 </section>
 
 <section class="servicios">
@@ -112,5 +112,10 @@
 
     </form>
 </section>
+<script>
+  document.getElementById("btnIrArriba").addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>
